@@ -1,4 +1,4 @@
-def erasTable (tab):
+def eraseTable (tab):
    '''
    (list) -> None
    This function prepares the game table (array) 
@@ -6,6 +6,7 @@ def erasTable (tab):
    It does not create a new array
    Preconditions: tab is a reference to an nxn array matrice n x n that contains '-', 'X' or 'O'
    '''
+      
    tab = [['-','-','-'],['-','-','-'],['-','-','-']]
       
     # to complete
@@ -31,11 +32,16 @@ def verifyWin(tab):
     x = testLignes(tab)
     y = testCols(tab)
     z = testDiags(tab)
-    if (w and x and y and z) == 'X':
+    if (x or y or z) == 'X':
        print ("Player X has won")
-    # to complete
-   
-    return False  # to change
+       return True 
+    elif (x or y or z) == 'O':
+       print ("Player O has won")
+       return True
+    elif (w) == '-':
+       print ("It is a draw")
+    else:
+       return False
 
  
 def testLignes(tab):

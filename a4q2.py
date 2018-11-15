@@ -1,6 +1,6 @@
 from a4q2Lib import *
     
-def eraseTable (tab):
+def displayTable(tab):
     '''
     (list) -> None
     Display the game table
@@ -64,7 +64,7 @@ while response == 'o' or response == 'O':
       eraseTable(table)  # prepares the game table
       winner = False  # initializes the variable winner 
       while not winner: 
-        displyTable(table) # display the game table
+        displayTable(table) # display the game table
         play(table,'X')  # ask player X to play
         winner = verifyWin(table)  # Did he win?
         if not winner: 
