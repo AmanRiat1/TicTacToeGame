@@ -57,6 +57,7 @@ def testLignes(tab):
         if tab[x][0] == tab[x][1]:
             if tab[x][1] == tab[x][2]:
                 y = tab[x][0]
+
   
                
     return y # to be modified so that it returns the winner, or '-' if there is no winner  
@@ -68,10 +69,22 @@ def testCols(tab):
    * If it is the case the character 'X' or 'O' is returned, otherwise '-' is returned.
    * Preconditions: tab is a reference to an nxn array that contains '-', 'X' or 'O'
    '''
-    
+   q = 0
+   x = 0
+   y = '-'
+   z = True
+   while z == True:
+      if q > 2:
+         z= False
+         break
+      if tab[q][x] == tab[q][x+1] == tab[q][x+2]:
+         y = tab[q][x]
+         z = False
+      else:
+         q += 1
    # to complete
   
-   return '-'   #to be modified so that it returns the winner, or '-' if there is no winner
+   return y   #to be modified so that it returns the winner, or '-' if there is no winner
 
    
 def testDiags(tab):
@@ -81,6 +94,7 @@ def testDiags(tab):
    * otherwise '-' is returned.
    * Preconditions: tab is a reference to an nxn array that contains '-', 'X' or 'O'
    '''
+   z = '-'
    if tab[0][0] == tab[1][1]:
       if tab[1][1] == tab[2][2]:
          z = tab[2][2]
