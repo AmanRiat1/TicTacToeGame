@@ -27,7 +27,12 @@ def verifyWin(tab):
     * pour verifier s'il y a un gagnant.
     * Those functions returns the winner 'X' or 'O', or '-' if there is no winner.
     '''
-
+    w = testDraw(tab)
+    x = testLignes(tab)
+    y = testCols(tab)
+    z = testDiags(tab)
+    if (w and x and y and z) == 'X':
+       print ("Player X has won")
     # to complete
    
     return False  # to change
@@ -94,6 +99,7 @@ def testDraw(tab):
    p = 0
    for x in (tab[q]):
       if x != 'X' and 'O':
+         return False 
          break
       else:
          q += 1
