@@ -102,17 +102,25 @@ def testDraw(tab):
    * If we do not find find any '-' in the array, return True. 
    * If there is any '-', return false.
    * Preconditions: tab is a reference to an nxn array that contains '-', 'X' or 'O'
-   '''
+   ''' 
+   z = True
    q = 0
-   p = 0
-   for x in (tab[q]):
-      if x != 'X' and 'O':
-         return False 
-         break
-      else:
+   while z == True:
+      if q <= 2:
+         for y in tab[q]:
+            if y == 'X' or y == 'O':
+               z = True
+            else:
+               z = False
+               return False
          q += 1
-         
+      else:
+         return True 
+
    # to complete
-  
-   return False  # to BE modiffied
+   return z
+   #return False  # to BE modiffied
+
+x =[['X','O','X'],['O','X','O'],['X','X','X']]
+print (testDraw(x))
 
