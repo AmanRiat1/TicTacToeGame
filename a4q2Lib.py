@@ -63,17 +63,21 @@ def testLignes(tab):
     return y # to be modified so that it returns the winner, or '-' if there is no winner  
 
 def testCols(tab):
-   ''' (list) ->  str
+   '''(list) ->  str
    * verify a winning column.
    * look for three 'X' or three 'O' in a column.  
    * If it is the case the character 'X' or 'O' is returned, otherwise '-' is returned.
    * Preconditions: tab is a reference to an nxn array that contains '-', 'X' or 'O'
    '''
+       
+   i = 0
 
-   # to complete
-  
-   return y   #to be modified so that it returns the winner, or '-' if there is no winner
-
+   for j in range(len(tab)):
+       if tab[i][j] == tab[i+1][j]:
+           if tab[i+1][j] == tab[i+2][j]:
+               return tab[i][j]
+           else:
+               return "-"
    
 def testDiags(tab):
    ''' (list) ->  str
