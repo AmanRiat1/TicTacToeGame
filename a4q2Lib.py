@@ -8,6 +8,7 @@ def eraseTable (tab):
    '''
       
    tab = [['-','-','-'],['-','-','-'],['-','-','-']]
+
       
     # to complete
     
@@ -125,6 +126,5 @@ def testDraw(tab):
    return z
    #return False  # to BE modiffied
 
-x =[['X','O','X'],['O','X','O'],['X','X','X']]
-print (testDraw(x))
+
 
